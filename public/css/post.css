@@ -1,0 +1,42 @@
+.page-title {
+  margin-bottom: 2rem;
+}
+
+title {
+  font-size: 4rem !important;
+}
+
+form {
+  width: 60%;
+}
+
+.preview-article {
+  width: 48%;
+  height: 90vh;
+  position: fixed;
+  top: 4%;
+  left: 30%;
+  /* border: 1px solid #ccc; */
+  padding: 3rem;
+  background: #fff;
+  visibility: hidden;
+  overflow-y: auto;
+  box-shadow: 2px 2px 8px 2px #ccc;
+}
+
+.article {
+  background: #fff;
+  height: 100%;
+}
+
+.article-title {
+  margin-bottom: 2rem;
+}
+
+.article-wrapper {
+  padding: 3rem 0;
+}
+
+#article-image {
+  width: 100%;
+}

@@ -1,0 +1,39 @@
+html {
+  font-size: 85%;
+}
+
+.navbar {
+  border-bottom: 1px solid #75c9d4;
+}
+
+.dashboard-navbar {
+  height: 94.2vh;
+  padding-top: 2rem;
+  padding-right: 0;
+}
+
+.dashboard-navbar a {
+  color: #444;
+}
+
+.userinfo-form {
+  margin-left: 80rem;
+}
+
+i {
+  vertical-align: bottom !important;
+  margin-right: 0.4rem;
+}
+
+li {
+  list-style: none;
+}
+
+.dashboard-item {
+  padding: 0.8rem 0.4rem 0.8rem 1rem;
+  cursor: pointer;
+}
+
+.dashboard-item:hover {
+  background-color: #75c9d4;
+}

@@ -1,0 +1,12 @@
+.edit-profile-info {
+  width: 40rem;
+  margin: 6rem auto;
+}
+
+#account-info-title {
+  margin-bottom: 2rem;
+}
+
+.submit-btn {
+  margin-bottom: 1rem !important;
+}
