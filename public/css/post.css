@@ -1,42 +1,37 @@
-.page-title {
-  margin-bottom: 2rem;
+.navbar {
+  border-bottom: none;
 }
 
-title {
-  font-size: 4rem !important;
+.post-header {
+  width: 100%;
+  height: 30rem;
 }
 
-form {
-  width: 60%;
-}
-
-.preview-article {
-  width: 48%;
-  height: 90vh;
-  position: fixed;
-  top: 4%;
-  left: 30%;
-  /* border: 1px solid #ccc; */
-  padding: 3rem;
-  background: #fff;
-  visibility: hidden;
-  overflow-y: auto;
-  box-shadow: 2px 2px 8px 2px #ccc;
-}
-
-.article {
-  background: #fff;
+.image-container {
+  background: url("../img/desert.jpg");
   height: 100%;
 }
 
-.article-title {
-  margin-bottom: 2rem;
-}
-
-.article-wrapper {
-  padding: 3rem 0;
-}
-
-#article-image {
+.post {
   width: 100%;
+  padding-bottom: 4rem;
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+h1 {
+  margin: 0.2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.post-author-description {
+  margin-bottom: 2rem;
+  color: #888;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 389px) {
+  .post {
+    padding: 2rem 0rem 4rem 0rem;
+  }
 }

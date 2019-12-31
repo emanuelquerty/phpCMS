@@ -17,7 +17,7 @@ html {
 }
 
 .userinfo-form {
-  margin-left: 80rem;
+  margin-left: 80%;
 }
 
 i {
@@ -36,4 +36,58 @@ li {
 
 .dashboard-item:hover {
   background-color: #75c9d4;
+}
+
+.dashboard-body-title {
+  margin-bottom: 2rem;
+}
+
+.add-new-post-btn,
+.num-posts-text,
+#num-posts {
+  color: #4195a0;
+}
+
+.add-new-post-btn:hover {
+  color: #4195a0;
+}
+
+table {
+  border: 1px solid #999;
+}
+
+table th,
+table td {
+  width: 18%;
+  text-align: center;
+  border-right: 1px solid #999;
+  border-left: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding: 0.6rem 0 0.5rem 0;
+}
+
+table #title-header {
+  width: 48%;
+}
+
+table #action-header {
+  width: 12rem;
+}
+
+table .action {
+  margin-right: 0.8rem;
+}
+
+table .action-btn,
+.add-new-post-btn {
+  padding: 0 0.6rem;
+  margin-top: -0.3rem;
+}
+
+/* *********************** Responsive styles  ************************* */
+@media screen and (max-width: 768px) {
+  .userinfo-form {
+    margin-left: 0.7rem;
+    font-size: 1.2rem;
+  }
 }

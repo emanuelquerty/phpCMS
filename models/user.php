@@ -6,13 +6,6 @@
          // DB Stuff
          private $conn;
          private $table = 'users';
-
-        // DB Properties
-        public $id;
-        public $name;
-        public $email;
-        public $password;
-        public $created_at;
        
         // Constructor with DB
         public function __construct($db){

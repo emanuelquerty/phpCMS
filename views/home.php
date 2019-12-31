@@ -25,52 +25,22 @@ if (!isset($_SESSION['email'])) {
 
 <body>
     <div class="container-fluid px-0">
-        <div class="row">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-md navbar-light bg-primary">
-                    <a class="navbar-brand ml-2 mr-4" href="#">CMS</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <form class="form-inline my-2 my-lg-0 userinfo-form">
-                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                                <li class="nav-item">
-                                    <a class="email"><?php  echo $_SESSION['fullname'][0]  ?></a>
-                                </li>
-                                <li class="nav-item logout-btn">
-                                    <a class="nav-link" href="./views/login.php" id="logout-btn"> Logout</a>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </div>
+        <!-- Include top navbar -->
+        <?php include_once("./partials/topNavbar.php") ?>
 
         <!-- Body starts here -->
         <div class="row">
-            <div class="col-2 dashboard-navbar bg-primary">
-                <li class="nav-item active dashboard-item">
-                    <a class="nav-link home" href="./home.php"><i class="material-icons">home</i> Home</a>
-                </li>
-                <li class="nav-item dashboard-item">
-                    <a class="profile" href="./profile.php"><i class="material-icons">person</i> Profile</a>
-                </li>
-                <li class="nav-item dashboard-item">
-                    <a class="post" href="./post.php"><i class="material-icons">post_add</i> New Post</a>
-                </li>
-                <li class="nav-item dashboard-item">
-                    <a class="posts"><i class="material-icons">library_books</i> All Posts</a>
-                </li>
-                <li class="nav-item dashboard-item">
-                    <a class="comments"><i class="material-icons">comment</i> Comments</a>
-                </li>
+
+            <!-- Include side navbar -->
+            <?php include_once("./partials/sideNavbar.php") ?>
+
+            <div class="col-10 dashboard-body px-4 py-4">
+                <h1 class="dashboard-body-title">Posts</h1>
+                <p class="num-posts-text">Number of posts <span id="num-posts"></span> &nbsp; &nbsp; | &nbsp; &nbsp;<a
+                        class=" add-new-post-btn" href="./createPost.php">Add
+                        New Post</a></p>
+                <table id="my-posts-table"></table>
             </div>
-            <div class="col-10 dashboard-body"></div>
         </div>
     </div>
 
