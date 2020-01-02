@@ -22,6 +22,13 @@ function showImage(input) {
 
     reader.onload = function(e) {
       $("#article-image").attr("src", e.target.result);
+      $(".preview-text").html(input.files[0].name);
+
+      // Create an image
+      var image = document.createElement("img");
+      image.className = "image-preview-img";
+      image.src = window.URL.createObjectURL(input.files[0]);
+      document.querySelector(".image-preview").appendChild(image);
     };
 
     reader.readAsDataURL(input.files[0]);
@@ -55,15 +62,30 @@ function validate(event) {
   let formClassArray = form.className.split(" ");
   let postId = formClassArray[formClassArray.length - 1];
 
+  // Get the image from the input file
+  var formData = new FormData();
+  if (document.querySelector("#image").files.length == 0) {
+    formData.append("image", "None");
+  } else {
+    var blobFile = document.querySelector("#image").files[0];
+    formData.append("image", blobFile);
+    console.log(formData.get("image"));
+  }
+
+  // Append the title and body to the form object
+  formData.append("title", title);
+  formData.append("body", editorText);
+  formData.append("postId", postId);
+
   async function updatePost() {
     const url = "../controllers/editPost.php";
 
     let response = await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        // "Content-Type": "application/json"
       },
-      body: JSON.stringify({ title, body: editorText, postId })
+      body: formData
     }).then(res => res.json());
 
     return response;
@@ -71,6 +93,6 @@ function validate(event) {
 
   updatePost().then(res => {
     console.log(res);
-    window.location.href = "./home.php";
+    window.location.href = "./myposts.php";
   });
 }

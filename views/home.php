@@ -29,12 +29,12 @@ if (!isset($_SESSION['email'])) {
         <?php include_once("./partials/topNavbar.php") ?>
 
         <!-- Body starts here -->
-        <div class="row">
+        <div class="row dashboard-body">
 
             <!-- Include side navbar -->
             <?php include_once("./partials/sideNavbar.php") ?>
 
-            <div class="col-10 dashboard-body px-4 py-4">
+            <div class="col-10 px-4 py-4">
                 <h1 class="dashboard-body-title">Posts</h1>
                 <p class="num-posts-text">Number of posts <span id="num-posts"></span> &nbsp; &nbsp; | &nbsp; &nbsp;<a
                         class=" add-new-post-btn" href="./createPost.php">Add

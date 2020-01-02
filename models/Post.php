@@ -11,14 +11,15 @@
         }
 
         // Create a Post
-        public function create($title, $body, $author, $email){
+        public function create($title, $body, $author, $email, $coverImageName){
             // Create Query
             $query = 'INSERT INTO ' . $this->table . '
             SET 
                 title = :title,
                 body = :body,
                 author = :author,
-                email = :email
+                email = :email,
+                cover_image_name = :cover_image_name
             ';
 
             // Prepare Statement 
@@ -29,6 +30,7 @@
             $stmt->bindParam(':body', $body);
             $stmt->bindParam(':author', $author);
             $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':cover_image_name', $coverImageName);
 
             // Execute Query
             if ($stmt->execute()){
@@ -97,20 +99,39 @@
        }
 
           // update a Post
-          public function update($title, $body, $author, $email, $id){
-            // Create Query
-            $query = 'UPDATE ' . $this->table . '
-            SET 
-                title = :title,
-                body = :body,
-                author = :author,
-                email = :email
-            WHERE 
-                id=:id
+          public function update($title, $body, $author, $email, $id, $filenameToStore){
+
+            if ($filenameToStore == "noImage"){
+                // Create Query
+                $query = 'UPDATE ' . $this->table . '
+                SET 
+                    title = :title,
+                    body = :body,
+                    author = :author,
+                    email = :email
+                WHERE 
+                    id=:id
+                ';
+                 // Prepare Statement 
+                $stmt = $this->conn->prepare($query);
+
+            }else{ 
+                // Create Query
+                $query = 'UPDATE ' . $this->table . '
+                SET 
+                    title = :title,
+                    body = :body,
+                    author = :author,
+                    email = :email,
+                    cover_image_name = :cover_image_name
+                WHERE 
+                    id=:id
             ';
 
-            // Prepare Statement 
-            $stmt = $this->conn->prepare($query);
+                // Prepare Statement 
+                $stmt = $this->conn->prepare($query);
+                $stmt->bindParam(':cover_image_name', $filenameToStore);
+            }
 
             // Bind the data
             $stmt->bindParam(':title', $title);

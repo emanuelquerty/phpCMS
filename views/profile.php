@@ -30,12 +30,12 @@ if (!isset($_SESSION['email'])) {
         <?php include_once("./partials/topNavbar.php") ?>
 
         <!-- Body starts here -->
-        <div class="row">
+        <div class="row dashboard-body">
 
             <!-- Include side navbar -->
             <?php include_once("./partials/sideNavbar.php") ?>
 
-            <div class="col-10 dashboard-body px-4 py-4">
+            <div class="col-10 px-4 py-4">
                 <form class="edit-profile-info" onsubmit="return validate(event)">
                     <h3 id="account-info-title">Account Information</h3>
                     <div class="form-group">

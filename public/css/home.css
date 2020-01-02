@@ -3,17 +3,29 @@ html {
 }
 
 .navbar {
-  border-bottom: 1px solid #75c9d4;
+  border-bottom: 1px solid #455a64;
+  background-color: #37474f;
+  color: #eceff1 !important;
 }
 
 .dashboard-navbar {
   height: 94.2vh;
   padding-top: 2rem;
   padding-right: 0;
+  background-color: #37474f;
+  margin-top: 3.5rem;
 }
 
-.dashboard-navbar a {
-  color: #444;
+.dashboard-navbar a,
+.nav-link,
+.navbar-brand {
+  color: #eceff1 !important;
+}
+
+.dashboard-body {
+  margin-left: 16.67%;
+  margin-top: 3.2%;
+  /* background-color: red; */
 }
 
 .userinfo-form {
@@ -35,7 +47,7 @@ li {
 }
 
 .dashboard-item:hover {
-  background-color: #75c9d4;
+  background-color: #455a64;
 }
 
 .dashboard-body-title {

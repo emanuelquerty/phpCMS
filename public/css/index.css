@@ -1,0 +1,13 @@
+.navbar,
+.register-btn {
+  background-color: #37474f;
+}
+
+.navbar a,
+.register-btn {
+  color: #eceff1 !important;
+}
+
+.register-btn:hover {
+  background-color: #455a64;
+}

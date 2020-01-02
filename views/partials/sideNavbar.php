@@ -1,4 +1,4 @@
-<div class="col-2 dashboard-navbar bg-primary">
+<div class="col-2 dashboard-navbar fixed-top">
     <li class="nav-item active dashboard-item">
         <a class="home" href="./home.php"><i class="material-icons">home</i> Home</a>
     </li>

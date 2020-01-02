@@ -35,7 +35,7 @@ if (!isset($_SESSION['email'])) {
         <?php include_once("./partials/topNavbar.php") ?>
 
         <!-- Body starts here -->
-        <div class="row">
+        <div class="row dashboard-body">
 
             <!-- Include side navbar -->
             <?php include_once("./partials/sideNavbar.php") ?>
@@ -44,10 +44,22 @@ if (!isset($_SESSION['email'])) {
                 <h3 class="page-title">Edit Post</h3>
 
                 <form onsubmit="return false" class="edit-post-form <?php echo $_SESSION["post"]["id"]; ?>">
-                    <div class="form-group">
-                        <label for="image">Add Image</label>
-                        <br>
-                        <input type="file" class="image mb-4" id="image" name="image">
+                    <div class="form-group image-upload-div">
+                        <div class="row wrapper">
+                            <div class="col-9 image-upload-wrapper">
+                                <label for="image" id="image-upload-label" class="bg-secondary"> <i
+                                        class="material-icons">
+                                        insert_photo
+                                    </i>Upload image</label>
+                                <br>
+                                <input type="file" class="image mb-4 hidden" id="image" name="image">
+                                <div class="image-upload-state">
+                                    <p class="preview-text">No files currently selected for upload</p>
+                                </div>
+                            </div>
+                            <div class="col-3 image-preview">
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="title">Title</label>
@@ -68,7 +80,10 @@ if (!isset($_SESSION['email'])) {
                 <!-- Preview Article (hidden by default) -->
                 <div class="preview-article">
                     <div class="article">
-                        <img src="../public/img/image-road.jpeg" id="article-image" alt="">
+                        <img src="<?php $imageName = $_SESSION["post"]["cover_image_name"] == "noImage" ?
+                        "../public/post_cover_images/default-image.jpg" : "../public/post_cover_images/".
+                        $_SESSION["post"]["cover_image_name"];
+                        echo $imageName; ?>" id="article-image" alt="">
                         <div class="article-wrapper">
                             <h3 class="article-title">Dummy Title </h3>
                             <div class="article-body">

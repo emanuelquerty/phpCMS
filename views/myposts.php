@@ -30,10 +30,10 @@ if (!isset($_SESSION['email'])) {
         <?php include_once("./partials/topNavbar.php") ?>
 
         <!-- Body starts here -->
-        <div class="row">
+        <div class="row dashboard-body">
             <!-- Include side navbar -->
             <?php include_once("./partials/sideNavbar.php") ?>
-            <div class="col-10 myposts-body px-5 py-5"></div>
+            <div class="col-10 myposts-body px-4 py-4"></div>
         </div>
     </div>
 

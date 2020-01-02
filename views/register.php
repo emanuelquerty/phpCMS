@@ -19,7 +19,7 @@
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col-12">
-                <nav class="navbar navbar-expand-md navbar-light bg-primary">
+                <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="#">CMS</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -63,7 +63,7 @@
                             <input type="password" id="password2" name="password2" class="form-control"
                                 placeholder="Confirm Password" />
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block register-btn">
+                        <button type="submit" class="btn btn-block register-btn">
                             Register
                         </button>
                         <p class="lead mt-4">Have An Account? <a href="./login.php">Login</a></p>

@@ -18,7 +18,7 @@
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col-12">
-                <nav class="navbar navbar-expand-md navbar-light bg-primary">
+                <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="#">CMS</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"

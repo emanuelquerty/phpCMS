@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php session_start();
+    if (!isset($_SESSION['email'])) {
+        header('location: ../index.php');
+    }
+    
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,19 +36,22 @@
         ?>
 
         <div class="row body">
-            <div class="post-header bg-primary col-12">
-                <div class="col-lg-5 col-md-6 col-sm-8 col-11 m-auto image-container">
+            <div class="post-header col-12">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-11 m-auto image-container">
+                    <img class="cover-image m-auto" src="<?php $image_path = $_SESSION["post"]["cover_image_name"] == "noImage"? "../public/post_cover_images/default-image.jpg" :
+                    "../public/post_cover_images/".$_SESSION["post"]["cover_image_name"];
+                    echo $image_path; ?>" alt="Cover Image">
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-8 col-11 m-auto post-container">
                 <div class="post">
                     <h1 id="title"> <?php echo $_SESSION["post"]["title"]; ?></h1>
                     <p class="post-author-description">
-                        Written <?php echo $_SESSION["post"]["author"] . " on " . $_SESSION["post"]["created_at"]; ?>
+                        By <?php echo $_SESSION["post"]["author"] . " on " . $_SESSION["post"]["created_at"]; ?>
                     </p>
                     <div class='body'> <?php echo $_SESSION["post"]["body"]; ?></div>
                     <p class="post-author-description">
-                        Written <?php echo $_SESSION["post"]["author"] . " on " . $_SESSION["post"]["created_at"]; ?>
+                        By <?php echo $_SESSION["post"]["author"] . " on " . $_SESSION["post"]["created_at"]; ?>
                     </p>
                     <hr>
                 </div>
@@ -61,6 +69,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
+
+        <!-- Local Javascript -->
+        <script src="../public/javascript/post.js"></script>
 </body>
 
 </html>
