@@ -7,7 +7,7 @@ title {
 }
 
 form {
-  width: 60%;
+  width: 80%;
 }
 
 .image-upload-div {
@@ -50,7 +50,8 @@ form {
 }
 
 .preview-article {
-  width: 48%;
+  /* width: 48%; */
+  width: 52rem;
   height: 90vh;
   position: fixed;
   top: 4%;
@@ -78,4 +79,68 @@ form {
 
 #article-image {
   width: 100%;
+}
+
+@media screen and (max-width: 1160px) {
+  .preview-article {
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  form {
+    width: 50rem;
+  }
+
+  .preview-article {
+    left: calc(50% - 22.5rem);
+  }
+}
+
+@media screen and (max-width: 724px) {
+  form {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .create-new-post-body {
+    padding-left: 0.4rem !important;
+  }
+
+  .page-title {
+    margin-left: 1rem;
+  }
+
+  .preview-article {
+    width: 35rem;
+    left: calc(50% - 17.5rem);
+    padding: 2rem 1rem;
+  }
+
+  .image-upload-div {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .preview-article {
+    width: 26rem;
+    left: calc(50% - 13rem);
+    padding: 2rem 0.6rem;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .preview-article {
+    width: 23rem;
+    left: calc(50% - 11.5rem);
+  }
+}
+
+@media screen and (max-width: 331px) {
+  .preview-article {
+    width: 20rem;
+    left: calc(50% - 10.5rem);
+    padding: 2.5rem 0.6rem;
+  }
 }

@@ -35,7 +35,7 @@ if (!isset($_SESSION['email'])) {
             <!-- Include side navbar -->
             <?php include_once("./partials/sideNavbar.php") ?>
 
-            <div class="col-10 px-4 py-4">
+            <div class="col-12 px-4 py-4">
                 <form class="edit-profile-info" onsubmit="return validate(event)">
                     <h3 id="account-info-title">Account Information</h3>
                     <div class="form-group">

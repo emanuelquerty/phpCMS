@@ -33,7 +33,7 @@ if (!isset($_SESSION['email'])) {
         <div class="row dashboard-body">
             <!-- Include side navbar -->
             <?php include_once("./partials/sideNavbar.php") ?>
-            <div class="col-10 myposts-body px-4 py-4"></div>
+            <div class="col-xl-10 col-lg-10 col-md-10 col-12 myposts-body px-4 py-4"></div>
         </div>
     </div>
 

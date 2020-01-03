@@ -40,7 +40,7 @@ if (!isset($_SESSION['email'])) {
             <!-- Include side navbar -->
             <?php include_once("./partials/sideNavbar.php") ?>
 
-            <div class="col-10 create-new-post-body px-4 py-4">
+            <div class="col-xl-10 col-lg-10 col-md-10 col-12 create-new-post-body px-4 py-4">
                 <h3 class="page-title">Edit Post</h3>
 
                 <form onsubmit="return false" class="edit-post-form <?php echo $_SESSION["post"]["id"]; ?>">

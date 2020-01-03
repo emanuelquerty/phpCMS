@@ -10,3 +10,15 @@
 .submit-btn {
   margin-bottom: 1rem !important;
 }
+
+@media screen and (max-width: 586px) {
+  .edit-profile-info {
+    width: 98%;
+    /* margin: 6rem auto; */
+  }
+
+  .submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
