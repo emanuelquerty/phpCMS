@@ -52,7 +52,8 @@ if (!isset($_SESSION['email'])) {
                                         insert_photo
                                     </i>Upload image</label>
                                 <br>
-                                <input type="file" class="image mb-4 hidden" id="image" name="image">
+                                <input type="file" accept=".jpg, .jpeg, .png" class="image mb-4 hidden" id="image"
+                                    name="image">
                                 <div class="image-upload-state">
                                     <p class="preview-text">No files currently selected for upload</p>
                                 </div>
