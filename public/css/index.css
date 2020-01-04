@@ -24,7 +24,7 @@
 }
 
 .create-account-or-login-container {
-  padding: 2rem 0 !important;
+  padding: 5rem 0 1rem 0 !important;
   position: fixed;
   top: 4rem;
   right: 0;
@@ -40,6 +40,7 @@
 
 .all-posts {
   margin: 6rem 0 !important;
+  padding-top: 3rem !important;
 }
 
 .post {
@@ -58,7 +59,7 @@
 
 @media screen and (max-width: 768px) {
   .create-account-or-login-container {
-    padding: 4rem 0 !important;
+    padding: 5rem 0 0 0 !important;
     position: initial;
     top: 4rem;
     right: 0;
