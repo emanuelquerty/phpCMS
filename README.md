@@ -2,7 +2,7 @@
 
 - A PHP content management system for writing blogs
 
-- where users can view blog posts, create accounts and write their own blog posts as well
+- Users can view blog posts, create accounts and write their own blog posts as well
 
 - App was written in raw php, SQL with PDO, html, css, javascript and bootstrap.
 
