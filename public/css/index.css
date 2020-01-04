@@ -1,13 +1,85 @@
+/* body {
+  overflow-x: hidden;
+} */
+
 .navbar,
-.register-btn {
+.register-btn,
+.read-more-btn {
   background-color: #37474f;
 }
 
+.read-more-btn:hover {
+  background-color: #455a64;
+  color: #fff;
+}
+
 .navbar a,
-.register-btn {
+.register-btn,
+.read-more-btn {
   color: #eceff1 !important;
 }
 
 .register-btn:hover {
   background-color: #455a64;
+}
+
+.create-account-or-login-container {
+  padding: 2rem 0 !important;
+  position: fixed;
+  top: 4rem;
+  right: 0;
+}
+
+.create-account-or-login-container-wrapper {
+  width: 74%;
+}
+
+.cms-intro {
+  font-size: 1.8rem;
+}
+
+.all-posts {
+  margin: 6rem 0 !important;
+}
+
+.post {
+  width: 32rem;
+  box-shadow: 0px 0px 2px 2px #eee;
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  margin: 0 0 2rem 6rem;
+}
+
+.post-author-description {
+  margin-bottom: 2rem;
+  color: #888;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .create-account-or-login-container {
+    padding: 4rem 0 !important;
+    position: initial;
+    top: 4rem;
+    right: 0;
+  }
+
+  .create-account-or-login-container-wrapper {
+    margin: 4rem auto 1rem auto;
+  }
+
+  .all-posts {
+    margin: 0 0 !important;
+  }
+
+  .post {
+    margin: 0 auto 2rem auto;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .post {
+    width: 97%;
+    max-width: 0 auto 2rem auto;
+  }
 }

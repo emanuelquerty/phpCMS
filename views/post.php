@@ -1,9 +1,4 @@
-<?php session_start();
-    if (!isset($_SESSION['email'])) {
-        header('location: ../index.php');
-    }
-    
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,400i,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../public/css/main.css">
-    <link rel="stylesheet" href="../public/css/index.css">
     <link rel="stylesheet" href="../public/css/home.css">
     <link rel="stylesheet" href="../public/css/post.css">
 
@@ -28,9 +22,9 @@
 
     <div class="container-fluid px-0">
         <?php 
-            if (isset($_SESSION['email'])){
+            if (isset( $_SESSION["email"])){
                 include_once("./partials/topNavbar.php");
-            }else {
+            }else{
                 include_once("./partials/topNavbarLoggedOut.php");
             }
         ?>

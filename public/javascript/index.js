@@ -1,12 +1,13 @@
-// Get all posts of the logged in user
-async function getMyPosts() {
-  let response = await fetch("../controllers/myposts.php");
+// Get all posts from database
+async function getAllPosts() {
+  let response = await fetch("./controllers/getAllPosts.php");
   return await response.json();
 }
 
-getMyPosts().then(res => {
+getAllPosts().then(res => {
   console.log(res);
-  let posts = res.data;
+
+  let posts = res;
 
   if (posts.length == 0) {
     let noPostsDiv =
@@ -30,7 +31,7 @@ getMyPosts().then(res => {
       var doc = new DOMParser().parseFromString(post, "text/html");
       docFrag.appendChild(doc.documentElement);
     }
-    $(".myposts-body").html(docFrag);
+    $(".all-posts").html(docFrag);
 
     // Show full post when the user clicks read more
     $(".read-more-btn").click(function(event) {
@@ -39,8 +40,8 @@ getMyPosts().then(res => {
       let postId = btnClassArray[btnClassArray.length - 1];
 
       // Show the corresponding post
-      getPost("../controllers/getPost.php", postId).then(res => {
-        window.location.href = "./post.php";
+      getPost("./controllers/getPost.php", postId).then(res => {
+        window.location.href = "./views/post.php";
       });
     });
   }

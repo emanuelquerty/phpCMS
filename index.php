@@ -26,9 +26,9 @@
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col-12">
-                <nav class="navbar navbar-expand-md navbar-light ">
+                <nav class="navbar fixed-top  navbar-expand-md navbar-light ">
                     <a class="navbar-brand" href="#">CMS</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <button class="navbar-toggler bg-white mr-4" type="button" data-toggle="collapse"
                         data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -48,10 +48,27 @@
             </div>
         </div>
 
-        <div class="row mt-5 body">
+        <!-- <div class="row mt-5 body">
             <div class="col-lg-4 col-md-4 col-sm-8 col-11 m-auto">
                 <div class="card card-body text-center">
                     <h1><i class="fas fa-door-open"></i></h1>
+                    <p>Create an account or login</p>
+                    <a href="./views/register.php" class="btn btn-block mb-2 register-btn">Register</a>
+                    <a href="./views/login.php" class="btn btn-secondary btn-block">Login</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row body">
+            <div class="col-xl-7 col-lg-7 col-md-7 col-12 order-xl-1 order-lg-1 order-md-1 order-2 all-posts">
+
+            </div>
+            <div
+                class="col-xl-5 col-lg-5 col-md-5 col-12 order-lg-2 order-md-2 order-1 create-account-or-login-container">
+                <div class="card card-body text-center create-account-or-login-container-wrapper ">
+                    <h1 class="cms-intro">Write about what you care about</h1>
+                    <p class="mb-5">Share your blogs with the world</p>
+                    <h2><i class="fas fa-door-open"></i></h2>
                     <p>Create an account or login</p>
                     <a href="./views/register.php" class="btn btn-block mb-2 register-btn">Register</a>
                     <a href="./views/login.php" class="btn btn-secondary btn-block">Login</a>
@@ -71,6 +88,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
+    <!-- Local Javascript -->
+    <script src="./public/javascript/index.js"></script>
 </body>
 
 </html>

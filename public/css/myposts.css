@@ -12,6 +12,17 @@
   font-style: italic;
 }
 
+.read-more-btn {
+  background-color: #37474f;
+  color: #fff;
+  border: none;
+}
+
+.read-more-btn:hover {
+  background-color: #455a64;
+  color: #fff;
+}
+
 @media screen and (max-width: 530px) {
   .post {
     width: 97%;

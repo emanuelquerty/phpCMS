@@ -11,6 +11,7 @@
 .navbar a,
 .login-btn {
   color: #eceff1 !important;
+  border: none;
 }
 
 .login-btn:hover {
