@@ -1,6 +1,6 @@
-# phpCMS
+# PHP Content Management Sytem (CMS)
 
-- A PHP content management system (CMS) for writing blogs
+- A PHP content management system for writing blogs
 
 - where users can view blog posts, create accounts and write their own blog posts as well
 
